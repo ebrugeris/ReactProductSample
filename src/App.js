@@ -1,21 +1,26 @@
 
 import HomePage from "./pages/HomePage"
 import { Link, Route, Routes } from "react-router-dom"
-import ProfilePage from "./pages/ProfilePage"
-import Users from "./pages/Users"
-import Todos from "./pages/Todos"
-import OrdersPage from "./pages/OrdersPage"
+// import ProfilePage from "./pages/ProfilePage"
+// import Users from "./pages/Users"
+// import Todos from "./pages/Todos"
+// import OrdersPage from "./pages/OrdersPage"
 // import List from "./pages/suppliers/List"
 // import Add from "./pages/suppliers/Add"
 // import Update from "./pages/suppliers/Update"
 // import Detail from './pages/suppliers/Detail'
-import ListProducts from "./pages/products/ListProducts"
-import AddProduct from "./pages/products/Add"
-import UpdateProduct from "./pages/products/Update"
-import DetailProduct from './pages/products/Detail'
+// import ListProducts from "./pages/products/ListProducts"
+// import AddProduct from "./pages/products/Add"
+// import UpdateProduct from "./pages/products/Update"
+// import DetailProduct from './pages/products/Detail'
+import AddSupplierToStack from "./muiSamples/AddSupplierToStack"
+import AddSupplierToGrid from "./muiSamples/AddSupplierToGrid"
+import OrdersDataGrid from "./muiSamples/OrdersDataGrid"
 
 
 function App() {
+
+  return<AddSupplierToGrid/>
 
 
   return <>
@@ -37,15 +42,6 @@ function App() {
 
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/users" element={<Users/>} />
-      <Route path="/todos" element={<Todos/>} />
-
-      {/* Product routes */}
-      <Route path="/products" element={<ListProducts/>}/>
-      <Route path="/products/add" element={<AddProduct/>}/>
-      <Route path="/products/update/:id" element={<UpdateProduct/>}/>
-      <Route path="/products/detail/:id" element={<DetailProduct/>}/>
-
 
     </Routes>
 
