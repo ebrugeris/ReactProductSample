@@ -6,7 +6,7 @@ import Favorites from "./pages/orders/Favorites"
 import AddProduct from "./pages/products/AddProduct"
 import ProductList from "./pages/products/ProductList"
 import Comments from "./pages/comments/Comments"
-import { useState } from "react"
+import CommentsSWR from "./pages/comments/CommentsSWR"
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/productlist" element={<ProductList />} />   
         <Route path="/comments" element={<Comments />} />   
+        <Route path="/commentsSWR" element={<CommentsSWR />} />   
 
       </Routes>
     </DashboardLayout>

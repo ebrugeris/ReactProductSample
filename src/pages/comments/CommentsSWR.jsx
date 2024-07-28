@@ -1,23 +1,18 @@
-import { Box, CircularProgress } from '@mui/material'
-import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 import React from 'react'
-import { queryClient } from '../..'
-import { DataGrid } from '@mui/x-data-grid'
+import useSWR from 'swr';
+import { axiosInstanceJson } from '../../api/axiosInstance';
+import { Box, CircularProgress } from '@mui/material';
+import { DataGrid } from '@mui/x-data-grid';
 
-function Comments() {
 
-    const { data, isLoading, error } = useQuery({
-        queryKey: 'comments',
-        queryFn: async () => {
-           return axios.get('https://jsonplaceholder.typicode.com/comments')
-                .then(res => res.data)
-        }, 
-    })
+const fetcher = (url) => {
+    return axiosInstanceJson.get(url).then(res => res.data)
+} 
 
-    const refresh = () => {
-        queryClient.invalidateQueries(['comments'])
-    }
+function CommentsSWR() {
+    const { data, error, isLoading } = useSWR("comments",
+        fetcher
+    );
 
     const columns = [
         {
@@ -58,4 +53,4 @@ function Comments() {
     </>
 }
 
-export default Comments
+export default CommentsSWR
