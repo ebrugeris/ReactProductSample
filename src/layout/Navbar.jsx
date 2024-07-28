@@ -13,7 +13,9 @@ function Navbar() {
       <Stack direction="row" justifyContent="space-evenly" sx={{ padding: "1%" }}>
         <Link style={{ color: "white", textDecoration: "none" }} to="/orders"><Typography variant="h5">Orders</Typography></Link>
         <Link style={{ color: "white", textDecoration: "none" }} to="/favorites"><Typography variant="h5">Favorites <span style={{color:"red"}}>({favorites.length})</span></Typography></Link>
-
+        <Link style={{ color: "white", textDecoration: "none" }} to="/addproduct"><Typography variant="h5">Add Product</Typography></Link>
+        <Link style={{ color: "white", textDecoration: "none" }} to="/productlist"><Typography variant="h5">Product List</Typography></Link>
+        
       </Stack>
     </AppBar>
   </>
