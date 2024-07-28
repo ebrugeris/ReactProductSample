@@ -14,7 +14,7 @@ function Favorites() {
         <ul>
             {
                 favorites.map(item => <li style={{margin:10}} key={item.id}>
-                    {item.customerId}
+                    {item.customerId} {item.requiredDate}
                     <Button onClick={() => favOperation(item)} size="small" style={{marginLeft:5}} variant="contained" color="error">Delete</Button>
                 </li>
                 )

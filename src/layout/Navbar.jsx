@@ -15,6 +15,7 @@ function Navbar() {
         <Link style={{ color: "white", textDecoration: "none" }} to="/favorites"><Typography variant="h5">Favorites <span style={{color:"red"}}>({favorites.length})</span></Typography></Link>
         <Link style={{ color: "white", textDecoration: "none" }} to="/addproduct"><Typography variant="h5">Add Product</Typography></Link>
         <Link style={{ color: "white", textDecoration: "none" }} to="/productlist"><Typography variant="h5">Product List</Typography></Link>
+        <Link style={{ color: "white", textDecoration: "none" }} to="/comments"><Typography variant="h5">Comments</Typography></Link>
         
       </Stack>
     </AppBar>
